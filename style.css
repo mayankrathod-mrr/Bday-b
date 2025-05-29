@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #ffe6f0, #ffd9ec);
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+#slide {
+  max-height: 500px;  /* or any height you prefer */
+  width: auto;        /* keep width proportional */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.slide-img {
+  max-height: 500px;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+/* Intro Screen */
+.intro-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffd6e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.intro-screen h1 {
+  font-size: 3rem;
+  color: #ff3366;
+  animation: pulse 2s infinite;
+}
+
+.buttons button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.buttons button:first-child {
+  background: #ff4081;
+  color: white;
+}
+
+.buttons button:last-child {
+  background: #eee;
+  color: #444;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+}
+
+/* Main Content */
+.greeting {
+  font-size: 2.5rem;
+  color: #ff4da6;
+  margin-top: 40px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.slideshow {
+  margin: 30px auto;
+  max-width: 600px;
+  border-radius: 15px;
+  overflow: hidden;
+  animation: slideUp 1.5s ease-in-out;
+}
+
+.slideshow img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.message {
+  margin: 30px auto;
+  max-width: 700px;
+  padding: 25px;
+  background: #fff0f5;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.message h2 {
+  color: #ff3399;
+  margin-bottom: 10px;
+}
+
+.message p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {opacity: 0; transform: translateY(50px);}
+  to {opacity: 1; transform: translateY(0);}
+}
